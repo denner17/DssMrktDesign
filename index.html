@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logos/white.logo.png">
+    <link rel="stylesheet" href="style.css">
+    <title>DesignSs</title>
+</head>
+
+<body>
+    <header>
+
+        <img src="logos/black.logo.png" alt="DesignSs">
+        <img src="logos/white.logo.png" alt="">
+
+
+        <nav>
+            <ul>
+                <li>Quem somos?</li>
+                <li>Trabalhos</li>
+                <li>Contato</li>
+            </ul>
+
+            <button id="toggle-mode">
+                <p class="dm">Dark</p>
+                <p class="lm">Light</p>
+            </button>
+            <script>
+                const toggleBtn = document.getElementById('toggle-mode');
+                const body = document.body;
+
+                toggleBtn.addEventListener("click", function () {
+                    body.classList.toggle("dark-mode");
+                })
+            </script>
+        </nav>
+
+
+
+
+    </header>
+
+    <main>
+
+        <div class="intro">
+            <h1>Marketing<br><span>Design></span></h1>
+
+            <p>Oferecendo soluções para empresas ou pessoas que desejam maximizar sua presença online e se conectar de
+                forma eficaz com seu público.
+            </p>
+
+            <a href="#iservicos"><button>
+                    <div></div><span>Serviços</span>
+                </button></a>
+        </div>
+        <div class="animacao">
+            <img class="circle" src="animacao/circle.png" alt="">
+            <img class="cursor" src="animacao/cursor.png" alt="">
+            <img class="grade" src="animacao/grade.png" alt="">
+            <img class="lupa" src="animacao/lupa.png" alt="">
+        </div>
+    </main>
+
+    <section class="quemSomos">
+        <h2>Quem somos?</h2>
+
+        <p>Nossa equipe trabalha lado a lado com nossos clientes para criar, gerenciar e otimizar perfis em redes
+            sociais como Instagram, Facebook, LinkedIn e TikTok, sempre focando em resultados mensuráveis.</p>
+
+        <h2>Como vamos trabalhar:</h2>
+
+        <div class="carrossel">
+
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 4</div>
+                    <div class="secimg">
+                        <h3>Conhecendo a marca</h3>
+                        <img src="carrossel_img/lupa.webp" alt="">
+                        <p>Investigamos a fundo seu público-alvo, valores, missão e diferenciais. Nosso objetivo é
+                            entender sua visão e o mercado em que atua para alinhar nossas estratégias de forma
+                            personalizada.</p>
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 4</div>
+                    <div class="secimg">
+                        <h3>Identidade visual</h3>
+                        <img src="carrossel_img/design.png" alt="">
+                        <p>Com base no conhecimento adquirido, desenvolvemos uma identidade visual exclusiva que
+                            representa com precisão a personalidade da sua marca. Isso inclui a criação de logotipos,
+                            paleta de cores, tipografia e todos os elementos visuais que transmitirão a mensagem da sua
+                            empresa.</p>
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 4</div>
+                    <div class="secimg">
+                        <h3>Planejamento</h3>
+                        <img src="carrossel_img/tasks.png" alt="">
+                        <p>Analisamos quais canais de comunicação serão mais eficazes e definimos metas claras. Criamos
+                            um plano de ação detalhado, que pode incluir estratégias de marketing digital, campanhas em
+                            redes sociais, marketing de conteúdo, entre outras.</p>
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <div class="secimg">
+                        <h3>Ação</h3>
+                        <img src="carrossel_img/aim.png" alt="">
+                        <p>Chegou o momento de transformar planos em ação! Nossa equipe está constantemente otimizada e
+                            pronta para realizar ajustes rápidos, garantindo que sua marca continue crescendo e
+                            alcançando seus objetivos no ambiente digital.</p>
+                    </div>
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                // Next/previous controls
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                // Thumbnail image controls
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                }
+            </script>
+        </div>
+    </section>
+
+    <section id="iservicos" class="servicos">
+        <h2>Nossos serviços</h2>
+
+        <div class="container">
+            <div class="card">
+                <img src="" alt="">
+                <h4>Gestão de mídias sociais</h4>
+                <hr>
+                <p>Gerenciamento de perfis em redes sociais (Instagram, Facebook, LinkedIn, Twitter, TikTok, etc.)</p>
+                <button>
+                    <div></div><span>contratar</span>
+                </button>
+            </div>
+            <div class="card">
+                <h4>Design de fotos</h4>
+                <hr>
+                <p>Equipe de design gráfico disponível! Fotos para redes sociais, banners promocionais, até imagens para
+                    sites e campanhas publicitárias.</p>
+
+                <button>
+                    <div></div><span>contratar</span>
+                </button>
+            </div>
+            <div class="card">
+                <h4>Marketing de conteúdo</h4>
+                <hr>
+                <p>Produção de artigos, blogs, vídeos, infográficos e outros tipos de conteúdo que atraem e educam o
+                    público-alvo, fortalecendo a marca</p>
+
+                <button>
+                    <div></div><span>contratar</span>
+                </button>
+            </div>
+            <div class="card">
+                <h4>Desenvolvimento e design de sites</h4>
+                <hr>
+                <p>Criação e otimização de sites responsivos e focados na conversão, com experiência do usuário (UX) e
+                    design atraente.</p>
+
+                <button>
+                    <div></div><span>contratar</span>
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="trabalhos">
+        <h2>Clientes</h2>
+
+        <p>Veja alguns dos nossos trabalhos mais recentes a baixo. Uma demenstração de como é o marketing de conteúdo na
+            prática, com a landing-page pronta para divulações.</p>
+        
+        <hr>
+
+        <div class="clientes">
+            <img src="trabalhos/andreagomes.png.png" alt="">
+            <img src="trabalhos/corpoatleta.png.png" alt="">
+            <img src="trabalhos/cesar.png.png" alt="">
+            <a href="https://linktr.ee/mvpmotivacao?fbclid=PAZXh0bgNhZW0CMTEAAaYMStXT3KZ6dexE5a5oOo3ibB0WsmFy0DX7mj7shz4rCChGoefKiV38VAA_aem_koKLorbhqf2hkzNaQuyB-Q"><img src="trabalhos/mvp.png" alt=""></a>
+            <img src="trabalhos/faculdade-sogipa.webp" alt="">
+            <img src="trabalhos/sogipaatletismo.png.png" alt="">
+        </div>
+    </section>
+
+    <footer>
+        <img src="logos/white.logo.png" alt="">
+
+        <ul class="quick_links">
+            <h4>Links Rápidos</h4>
+            <li>Voltar ao topo</li>
+            <li>Nossos serviços</li>
+            <li>Linketree</li>
+        </ul>
+
+        <ul class="contato">
+            <h4>Contato</h4>
+            <li>51992714177</li>
+            <li>dennersimao2@gmail.com</li>
+            <li>linkedin</li>
+        </ul>
+
+        <ul class="redes">
+            <h4>Redes</h4>
+            <li>Instagram</li>
+            <li>Twitter</li>
+            <li>tiktok</li>
+        </ul>
+    </footer>
+</body>
+
+</html>
